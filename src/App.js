@@ -9,14 +9,12 @@ function App() {
   const [orderInformation, setOrderInformation] = useState();
 
   useEffect(() => {
-    setLoading(true);
     fetch("https://indapi.kumba.io/webdev/assignment")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         setOrderInformation(data);
-        setLoading(false);
       });
   }, []);
 
