@@ -1,38 +1,173 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: Poppins Extrabold;
+  src: url("./assets/fontpack/Poppins-ExtraBold.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: Poppins Bold;
+  src: url("./assets/fontpack/Poppins-Bold.ttf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.layout {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url("./assets/images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+._navbar_ {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+._navbar_,
+.footer {
+  font-family: Poppins Extrabold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 80px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  height: 50px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  padding-left: 1rem;
+  width: 100vw;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+._customer_info_ {
+  height: calc(100vh - 80px);
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 2rem !important;
 }
 
-.App-link {
-  color: #61dafb;
+._profile_card_ {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 32px;
+  padding: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.profile_card_text,
+li {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.cart {
+  background: #fa4a0c;
+  padding: 8px;
+  border-radius: 30%;
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.profile-pix {
+  width: 200px;
+  height: 200px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+._profile_card_ ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+._profile_card_ ul li {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+._profile_card_ span,
+.cart_price span {
+  font-size: 17px;
+  font-weight: 400;
+  color: #fa4a0c !important;
+}
+
+.items span {
+  font-family: Montserrat;
+}
+
+.items p {
+  font-family: Poppins Bold;
+  color: #ffffff;
+}
+
+.restaurant_title {
+  font-family: Raleway;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.restaurant_text {
+  font-family: Raleway;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.spinner-grow {
+  width: 4rem;
+  height: 4rem;
+}
+
+@media (max-width: 767.8px) {
+  .layout {
+    overflow: scroll !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .sm {
+    margin-top: 2rem;
+  }
+
+  ._customer_info_ {
+    height: 100%;
+    margin-top: 8rem;
+  }
+
+  ._profile_card_ {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  .layout {
+    overflow: scroll !important;
+  }
+
+  ._customer_info_ {
+    height: 100%;
+    margin-top: 3rem;
+  }
+
+  ._profile_card_ {
+    margin-bottom: 2rem;
+  }
+
+  ._navbar_,
+  .footer {
+    background: rgba(0, 0, 0, 0.9);
   }
 }
