@@ -7,7 +7,6 @@ import OrderSummary from "./pages/order-summary";
 
 function App() {
   const [orderInformation, setOrderInformation] = useState();
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
